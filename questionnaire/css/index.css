@@ -49,12 +49,10 @@ body{
 
 
 .nav .questionWrap .questionItem{
-    width:80%;height:13%;
+    width:80%;height:14%;
     margin: 0% 10%;
     border-top: 1px dotted white;
     color: white;
-    border-bottom: 1px dotted white;
-    color: white
 }
 
 .nav .questionWrap  .questionItem .questionTitle{
@@ -65,6 +63,25 @@ body{
 
 .nav .questionWrap .questionItem .questionRadiaWrap{
     text-align: left;
-    margin-top: 3%;
+    margin-top: 35px;
     color: white;
+}
+
+/*.nav .questionWrap .questionSubmit{*/
+    /*text-align: center;*/
+    /*margin: 8% auto;*/
+    /*color: white;*/
+/*}*/
+
+.nav .questionWrap .questionSubmit{
+    text-align: center;
+    margin: 80px auto;
+    color: white;
+}
+
+.nav .questionWrap .questionSubmit .questionSubmitSpan{
+    background:#2b8629;
+    padding: 1%;
+    border-radius: 5px;
+    width: 100px;
 }

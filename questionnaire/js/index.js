@@ -342,28 +342,27 @@ window.onload=function () {
 
         
         function submitPetQuestAjax() {
-            alert("ajax");
-            alert(sexValue);
-            alert(ageValue);
-            alert(liveareaValue);
-            alert(isfeedpetValue);
-            alert(payforpetmonthValue);
-            alert(petageValue);
-            alert(isknowpetguildValue);
-            alert(knowpetfuneralfromValue);
-            alert(ifpetdieValue);
-            alert(deathpettowhereValue);
-            alert(howtopayfordeathpetValue);
-            alert(isneedspacefordeathpetValue);
-            alert(isneeddeathpetreposeValue);
-            alert(isbuynewpetValue);
-            alert(buynewpetfromValue);
-            alert(ischeckfornewpetValue);
-
+            // alert("ajax");
+            // alert(sexValue);
+            // alert(ageValue);
+            // alert(liveareaValue);
+            // alert(isfeedpetValue);
+            // alert(payforpetmonthValue);
+            // alert(petageValue);
+            // alert(isknowpetguildValue);
+            // alert(knowpetfuneralfromValue);
+            // alert(ifpetdieValue);
+            // alert(deathpettowhereValue);
+            // alert(howtopayfordeathpetValue);
+            // alert(isneedspacefordeathpetValue);
+            // alert(isneeddeathpetreposeValue);
+            // alert(isbuynewpetValue);
+            // alert(buynewpetfromValue);
+            // alert(ischeckfornewpetValue);
 
             $.ajax({
                 type: "post",
-                url: "localhost:8080/chenchi/chenchiWebPet/submitPetQuestion.do",
+                url: "/chenchi/chenchiWebPet/submitPetQuestion.do",
                 data: {
                     "sex": sexValue,
                     "age": ageValue,
@@ -385,42 +384,25 @@ window.onload=function () {
                 dataType: "json",
 //            contentType:'application/json',
                 success: function (data) {
-                    alert(data.Flag);
-                    alert(data.Msg);
+                    if(data.msg=="Ok"){
+                    	// alert("感谢你的参与");
+                        window.location.href='endPage.html';
+                    }
 
 
                 },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    alert(XMLHttpRequest.status);
-                    alert(XMLHttpRequest.readyState);
-                    alert(textStatus);
+                    // alert(XMLHttpRequest.status);
+                    // alert(XMLHttpRequest.readyState);
+                    // alert(textStatus);
+                    window.location.href='endPage.html';
+
                 },
             });
 
-//             $.ajax({
-//                 type: "post",
-//                 url: "http://localhost:8080/chenchi/chenchiWebVersion/versionVerify.do?internetBarId=15&versionCode=213",
-//                 data: {
-//                     "internetBarId":15,
-//                     "versionCode": 213
-//
-//                 },
-//                 dataType: "json",
-// //            contentType:'application/json',
-//                 success: function (data) {
-//                     alert(data.Flag);
-//                     alert(data.Msg);
-//
-//
-//                 },
-//                 error: function (XMLHttpRequest, textStatus, errorThrown) {
-//                     alert(XMLHttpRequest.status);
-//                     alert(XMLHttpRequest.readyState);
-//                     alert(textStatus);
-//                 },
-//             });
-
         }
     }
+
+
 
 }

@@ -2,6 +2,10 @@
     clear: both;
 }
 
+.border-bottom{
+    border-bottom: 1px dotted white;
+
+}
 /**块级元素转换成行内元素*/
 .change_inline-block{
     display: inline-block
